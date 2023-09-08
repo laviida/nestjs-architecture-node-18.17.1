@@ -23,7 +23,7 @@ import { CustomLoggerService } from '@core/services/logger/logger.service';
 import { useContainer } from 'class-validator';
 import { ENV } from '@core/constants/constants';
 
-const env = process.env.NODE_ENV as ENV;
+const env = (process.env.NODE_ENV as ENV) ?? ENV.DEV;
 
 async function createNestServer(expressInstance?: Express): Promise<void> {
   // Create Express Server Instance
