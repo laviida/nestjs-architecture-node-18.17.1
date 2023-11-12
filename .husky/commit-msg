@@ -8,7 +8,7 @@ msg=`cat "$1"`
 version=""
 
 case $msg in
-[*"major"*] | [*"BREAKING CHANGE"*])
+*"chore(major)"* | *"major"* | *"BREAKING CHANGE"*)
     version="major"  
 ;;
 *"feat"*)

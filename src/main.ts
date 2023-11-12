@@ -122,6 +122,7 @@ function setupSwagger(
   SwaggerModule.setup(swaggerDocsUrl, app, document, {
     customSiteTitle: swaggerConfig.title,
     customCss: swaggerCss,
+    customJs: '/api/static/swagger.js',
     customfavIcon: '/api/static/favicon.ico',
   });
 }

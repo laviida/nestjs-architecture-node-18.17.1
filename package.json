@@ -6,7 +6,6 @@
   "private": true,
   "license": "UNLICENSED",
   "scripts": {
-    "_prepare": "husky install && husky add .husky/commit-msg && husky add .husky/post-commit",
     "prebuild": "rimraf dist",
     "build": "nest build",
     "format": "prettier --write \"src/**/*.ts\" \"test/**/*.ts\"",
@@ -31,7 +30,9 @@
     "pm2:startup": "pm2 startup",
     "pm2:save": "pm2 save",
     "pm2:unstartup": "pm2 unstartup",
-    "pm2:update": "pm2 update"
+    "pm2:update": "pm2 update",
+    "ci:husky-install": "husky install",
+    "ci:husky-add": "husky add .husky/commit-msg && husky add .husky/post-commit"
   },
   "dependencies": {
     "@commitlint/cli": "^17.7.1",
